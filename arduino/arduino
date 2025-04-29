@@ -1,0 +1,16 @@
+int valor;
+
+void setup(){
+    pinMode(A0,INPUT);
+    pinMode(13,OUTPUT);
+    Serial.begin(9600);
+}
+
+void loop(){
+    valor= analogRead(A0);
+    if (valor <= 1000)
+        digitalWrite(13,0);
+    else
+        digitalWrite(13,1);
+
+}
